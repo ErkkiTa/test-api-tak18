@@ -10,6 +10,7 @@ request.onload = function() {
   data.forEach(movie => {
       console.log(movie.title)
       const movie_div = document.createElement('div')
+      movie_div.classList.add('movie')
       movie_div.innerHTML ='<div class="title">' + movie.title + '</div> <div class="desc">' + movie.description + '</div>'
       container.append(movie_div)
   })
@@ -19,3 +20,6 @@ request.onload = function() {
 
 // Send request
 request.send()
+
+
+
